@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #fcf5e9;
+  --secondary-color: #333;
+}
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+.bg-primary {
+  background-color: var(--primary-color);
+  color: black;
+  padding: 0 0.5rem;
+}
+.bg-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+.hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+header .container {
+  max-width: 900px;
+}
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.8rem auto;
+  gap: 1rem;
+}
+.main-menu a {
+  padding: 0.5rem 1rem;
+}
+.main-menu a:hover {
+  background-color: var(--primary-color);
+}
+.main-menu a.current {
+  background: var(--primary-color);
+  font-weight: 600;
+}
+.logo {
+  width: 130px;
+  display: block;
+}
+section {
+  padding: 2.5rem 2rem;
+}
+section h2 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+.hero {
+  height: 500px;
+}
+.hero.container-flex {
+  align-items: center;
+}
+.hero .container {
+  width: 1100px;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: normal;
+  line-height: 1.4;
+  text-align: center;
+}
+.galery {
+  margin: 0 auto;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.galery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.galery-item:nth-child(3) {
+  grid-row: span 2;
+}
+.galery-item:nth-child(6) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.galery-item:hover {
+  opacity: 0.8;
+}
+.services.container {
+  background-color: #333;
+  color: white;
+}
+.services .container-flex,
+.team .container-flex {
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1100px;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+}
+.services h3 {
+  margin-bottom: 1rem;
+}
+.services p {
+  line-height: 1.4;
+}
+.services ul {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.team .container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.team ul {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+.team p.team-name {
+  font-weight: bold;
+}
+.team img.team-photo {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.contacts {
+  padding: 0.5rem 0;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+.contacts p {
+  text-align: center;
+  margin: 1rem 2rem;
+}
+.contacts form {
+  margin: 1rem;
+}
+.contacts .form-group input,
+.contacts .form-group textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 1px solid #333;
+  padding: 1rem 0;
+}
+.contacts .form-group input,
+.contacts .form-group textarea:focus {
+  outline: none;
+}
+.contacts .form-group textarea {
+  height: 150px;
+}
+.contacts .btn {
+  background-color: white;
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid #333;
+}
+.contacts .btn :hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+footer {
+  border-top: 2px solid #33333342;
+  margin: 1.8rem 0;
+}
+footer .container {
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 1.8rem auto;
+  font-size: 1rem;
+}
+footer h4 {
+  margin-bottom: 0.55rem;
+}
+
+.footer-item {
+  text-align: start;
+}
+.footer-item ul {
+  text-align: left;
+}
+.footer-item .social-icons a {
+  margin: 0 0.2rem;
+}
+
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .hero {
+    height: 300px;
+  }
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .galery {
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .team ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img.team-photo {
+    width: 100%;
+  }
+  footer .container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+  }
+  .footer-item,
+  .footer-item li {
+    text-align: center;
+  }
+}
