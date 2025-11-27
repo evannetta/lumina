@@ -1,1 +1,1 @@
-[Lumina - simple website](https://evannetta.github.io/lumina/index.html)
+[Lumina](https://lumina-example.netlify.app/) - simple website with working form submission
